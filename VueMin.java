@@ -1,4 +1,4 @@
-package igMVC.exercice_mvc;
+package TP5;
 
 import java.util.*;
 import javax.swing.*;
@@ -10,10 +10,11 @@ public class VueMin extends JTextField implements Observer {
 	}
 	
 	public void update(Observable o, Object arg) {
-	/*	Model mod = (Model) o;
+		
+		Model mod = (Model) o;
 		ArrayList<String> list = mod.getListe();
 		String mot = list.get(0);
-		this.setText(mot);*/
+		this.setText(mot);
 	}
 	
 	

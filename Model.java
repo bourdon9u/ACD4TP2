@@ -1,4 +1,4 @@
-package igMVC.exercice_mvc;
+package TP5;
 
 import java.util.*;
 import javax.swing.*;

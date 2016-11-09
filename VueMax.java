@@ -1,11 +1,11 @@
-package igMVC.exercice_mvc;
+package TP5;
 
-import java.awt.Dimension;
+import java.awt.*;
 import java.util.*;
 import javax.swing.*;
 
 public class VueMax extends JTextField implements Observer {
-	
+
 	public VueMax(){
 		super(10);
 		this.setPreferredSize(new Dimension(200,30));

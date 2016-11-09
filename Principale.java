@@ -1,4 +1,4 @@
-package igMVC.exercice_mvc;
+package TP5;
 
 import java.awt.*;
 import javax.swing.*;
@@ -9,7 +9,7 @@ public class Principale {
 	 public static void main(String[] args) { 
 		 
 		 Model mod = new Model();
-		 Controler con = new Controler(mod);
+		 Controler control = new Controler(mod);
 		 
 		 JTextField saisie;
 
@@ -23,11 +23,10 @@ public class Principale {
 
 
 		 //JPanel Nord
-		 JTextField saisie ;
-		 saisie= new JTextField(10);
+		 saisie = new JTextField(10);
 		 saisie.setPreferredSize(new Dimension(200,30));
-		 saisie.addActionListener(con);
-		 
+		 saisie.addActionListener(control);
+
 		 
 		 JPanel panneauDeControle= new JPanel(new GridLayout(1,2));
 		 panneauDeControle.add(new JLabel("Donner une chaîne "+"    ",JLabel.CENTER));
@@ -36,11 +35,13 @@ public class Principale {
 		 //JPanel Sud
 		 JPanel panMaxMin = new JPanel(new GridLayout(2,2));
 		 panMaxMin.add(new JLabel("Plus grand mot ",JLabel.CENTER));
-		 panMaxMin.add(max);
-
+	//	 if((max.getText()).length() < saisie.length()){
+			 panMaxMin.add(max);
+		// }
 		 panMaxMin.add(new JLabel("Plus petit mot ", JLabel.CENTER));
-		 panMaxMin.add(min);
-
+		 //if((min.getText()).length() > saisie.length()){
+		 	panMaxMin.add(min);
+		// }
 		 //Construction de l'IG dans une JFrame		 
 		 JFrame frame=new JFrame();
 		 frame.getContentPane().add(panneauDeControle,BorderLayout.NORTH);

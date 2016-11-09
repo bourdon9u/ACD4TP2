@@ -1,4 +1,4 @@
-package igMVC.exercice_mvc;
+package TP5;
 
 import java.util.*;
 import javax.swing.*;
@@ -11,12 +11,10 @@ public class VueListe extends JTextArea implements Observer {
 	}
 	
 	public void update(Observable o, Object arg) {
-	/*	Model mod = (Model) o;
-		ArrayList<String> list = mod.getListe();
-		String mot = list.get(0);
-		this.setText(mot);*/
+
+		Model model = (Model)o;
+		setText("");		
+		for (String s : model.getListe())
+			this.append(s+"\n");
 	}
-	
-	
-	
 }
